@@ -1,8 +1,4 @@
 "use client"
-
-import { Github, Linkedin, Mail } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import EducationSection from "@/components/EducationSection"
 import ExperienceSection from "@/components/ExperienceSection"
@@ -10,7 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection"
 import ContactSection from "@/components/ContactSection"
 import Footer from "@/components/Footer"
 import Sidebar from "@/components/SideBar"
-import CertificatesSection from "@/components/CertificatesSection"
+
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about")

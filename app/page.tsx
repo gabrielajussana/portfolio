@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail } from "lucide-react"
+import { ExternalLink, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
@@ -295,6 +295,33 @@ export default function Home() {
                 </Button>
               </div>
             </div>
+
+            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <h3 className="text-base sm:text-lg font-medium text-slate-800 mb-2">My Pet</h3>
+              <p className="text-slate-600 mb-4">
+              Landing Page para uma ONG fictícia de adoção de cachorros. Dados consumidos da Dog API.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">JavaScript</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React Router</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Styled Components</span>
+              </div>
+              <div className="flex gap-3">
+                <Button variant="outline" size="sm" className="text-slate-700" asChild>
+                  <Link href="https://github.com/gabrielajussana/MyPet" target="_blank">
+                    <Github size={16} className="mr-2" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="sm" className="text-slate-700" asChild>
+                  <Link href="https://ongmypet.netlify.app" target="_blank">
+                    <ExternalLink size={16} className="mr-2" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+
           </div>
         </section>
 

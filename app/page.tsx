@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
-import profile from "../public/profile.jpg"
+
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about")
@@ -37,7 +37,15 @@ export default function Home() {
   const isActive = (sectionId: string) => activeSection === sectionId
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-slate-50 flex flex-col">
+       <header className="w-full h-40 lg:h-60 relative overflow-hidden lg:hidden">
+        <img
+          src="https://i.ibb.co/zVjz39Dn/Frame-65-1.png"
+          alt="Header background"
+          className="w-full h-full object-cover object-center"
+        />
+      </header>
+      
       <aside
         className={cn(
           "bg-white border-b lg:border-r border-slate-200",
@@ -47,12 +55,22 @@ export default function Home() {
         )}
       >
         <div className="space-y-4 lg:space-y-6">
-          <div className="space-y-1 lg:space-y-2">
-            <h1 className="text-2xl lg:text-4xl font-bold text-slate-800">Gabriela Jussana</h1>
-            <h2 className="text-lg lg:text-xl text-slate-600">Desenvolvedora Front-end</h2>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-6">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden mb-4 lg:mb-0 border-2 border-blue-200 mx-auto lg:mx-0 flex-shrink-0">
+              <img
+                src="https://i.ibb.co/Q7WWcRF2/IMG-20250211-092635.jpg"
+                alt="Gabriela Jussana"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="text-center lg:text-left space-y-1">
+              <h1 className="text-2xl lg:text-3xl font-bold text-slate-800">Gabriela Jussana</h1>
+              <h2 className="text-lg text-slate-600">Desenvolvedora Front-end</h2>
+            </div>
           </div>
 
-          <p className="text-slate-600 text-sm lg:text-base">
+          <p className="text-center lg:text-left text-slate-600 text-sm lg:text-base">
             Transformando ideias em experiências digitais acessíveis, rápidas e visualmente impactantes
           </p>
 
@@ -132,7 +150,7 @@ export default function Home() {
           </nav>
         </div>
 
-        <div className="flex space-x-4 mt-6 lg:mt-0">
+        <div className="justify-center lg:justify-start flex space-x-4 mt-6 lg:mt-0">
           <Button variant="ghost" size="icon" asChild aria-label="GitHub">
             <Link href="https://www.github.com/gabrielajussana" className="text-slate-700 hover:text-blue-500">
               <Github size={20} />

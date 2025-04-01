@@ -70,10 +70,6 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-center lg:text-left text-slate-600 text-sm lg:text-base">
-            Transformando ideias em experiências digitais acessíveis, rápidas e visualmente impactantes
-          </p>
-
           <nav className="pt-4 hidden lg:block lg:pt-8">
             <ul className="flex flex-wrap lg:flex-col gap-2 lg:gap-4">
               <li className="lg:w-full">

@@ -302,9 +302,22 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex gap-3">
-                <Button variant="outline" size="sm" className="text-slate-700" asChild>
-                  <Link href="https://github.com/RapportFlow/SkillUp_frontend" target="_blank">
-                    <Github size={16} className="mr-2" />
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+                  <Link
+                    href="https://github.com/OpenIdeasTech/SkillUp_frontend"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <Github size={16} />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+                  <Link
+                    href="https://oit-skill-up.netlify.app"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <ExternalLink size={16} />
                   </Link>
                 </Button>
               </div>
@@ -322,20 +335,26 @@ export default function Home() {
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Styled Components</span>
               </div>
               <div className="flex gap-3">
-                <Button variant="outline" size="sm" className="text-slate-700" asChild>
-                  <Link href="https://github.com/gabrielajussana/MyPet" target="_blank">
-                    <Github size={16} className="mr-2" />
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+                  <Link
+                    href="https://github.com/gabrielajussana/MyPet"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <Github size={16} />
                   </Link>
                 </Button>
-                <Button variant="outline" size="sm" className="text-slate-700" asChild>
-                  <Link href="https://ongmypet.netlify.app" target="_blank">
-                    <ExternalLink size={16} className="mr-2" />
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+                  <Link
+                    href="https://ongmypet.netlify.app"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <ExternalLink size={16} />
                   </Link>
                 </Button>
               </div>
             </div>
-
-
           </div>
         </section>
 

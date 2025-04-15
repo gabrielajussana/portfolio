@@ -286,8 +286,8 @@ export default function Home() {
         <section id="projects" className="mb-12 lg:mb-20">
           <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Projetos</h2>
           <div className="flex flex-col gap-6">
-            <div className="flex bg-white items-center gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-            <div className="flex-shrink-0 w-[200px] h-[150px]">
+            <div className="flex flex-col sm:flex-row bg-white items-center gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+            <div className="flex-shrink-0 w-full sm:w-[200px] h-[150px]">
               <img src="./skill-up.png" alt="Skill Up" className="w-full h-full object-contain" />
             </div>
              <div className="flex flex-col">
@@ -329,8 +329,8 @@ export default function Home() {
              </div>
             </div>
 
-            <div className="flex gap-4 bg-white gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-              <div className="flex-shrink-0 w-[200px] h-[150px]">
+            <div className="flex flex-col sm:flex-row gap-4 bg-white items-center gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <div className="flex-shrink-0 w-full sm:w-[200px] h-[150px]">
                 <img src="./my-pet.png" alt="My Pet" className="w-full h-full object-contain" />
               </div>
              <div className="flex flex-col">
@@ -369,8 +369,8 @@ export default function Home() {
              </div>
             </div>
 
-            <div className="flex gap-4 bg-white gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-              <div className="flex-shrink-0 w-[200px] h-[150px]">
+            <div className="flex flex-col sm:flex-row items-center gap-4 bg-white gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <div className="flex-shrink-0 w-full sm:w-[200px] h-[150px]">
                 <img src="./movies-series.png" alt="Movies and Series" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">

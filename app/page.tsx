@@ -285,12 +285,37 @@ export default function Home() {
 
         <section id="projects" className="mb-12 lg:mb-20">
           <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Projetos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex flex-col gap-6">
+            <div className="flex bg-white items-center gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+            <div className="flex-shrink-0 w-[200px] h-[150px]">
+              <img src="./skill-up.png" alt="Skill Up" className="w-full h-full object-contain" />
+            </div>
+             <div className="flex flex-col">
+             <div className="flex justify-between">
               <h3 className="text-base sm:text-lg font-medium text-slate-800 mb-2">Skill Up</h3>
-              <p className="text-slate-600 mb-4">
-                O projeto SkillUp permite que os participantes construam portfólios interativos e visuais, com métricas
-                de progresso. Focada no trabalho em equipe, ela conecta portfólios de forma colaborativa
+              <div className="flex">
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
+                  <Link
+                    href="https://github.com/OpenIdeasTech/SkillUp_frontend"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <Github size={16} />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
+                  <Link
+                    href="https://oit-skill-up.netlify.app"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <ExternalLink size={16} />
+                  </Link>
+                </Button>
+              </div>
+             </div>
+              <p className="text-slate-600 mb-4 text-sm">
+                SkillUp permite que os participantes construam portfólios. Focada no trabalho em equipe, ela conecta portfólios de forma colaborativa
                 <span className="hidden sm:inline">, criando uma rede de evolução conjunta</span>.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -301,41 +326,18 @@ export default function Home() {
                   Tailwind CSS
                 </span>
               </div>
-              <div className="flex gap-3">
-                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
-                  <Link
-                    href="https://github.com/OpenIdeasTech/SkillUp_frontend"
-                    target="_blank"
-                    className="flex items-center justify-center w-full h-full"
-                  >
-                    <Github size={16} />
-                  </Link>
-                </Button>
-                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
-                  <Link
-                    href="https://oit-skill-up.netlify.app"
-                    target="_blank"
-                    className="flex items-center justify-center w-full h-full"
-                  >
-                    <ExternalLink size={16} />
-                  </Link>
-                </Button>
-              </div>
+             </div>
             </div>
 
-            <div className="bg-white p-5 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-              <h3 className="text-base sm:text-lg font-medium text-slate-800 mb-2">My Pet</h3>
-              <p className="text-slate-600 mb-4">
-              Landing Page para uma ONG fictícia de adoção de cachorros. Dados consumidos da Dog API.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">JavaScript</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React Router</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Styled Components</span>
+            <div className="flex gap-4 bg-white gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <div className="flex-shrink-0 w-[200px] h-[150px]">
+                <img src="./my-pet.png" alt="My Pet" className="w-full h-full object-contain" />
               </div>
-              <div className="flex gap-3">
-                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+             <div className="flex flex-col">
+              <div className="flex justify-between">
+                <h3 className="text-base sm:text-lg font-medium text-slate-800 mb-2">My Pet</h3>
+                <div className="flex">
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
                   <Link
                     href="https://github.com/gabrielajussana/MyPet"
                     target="_blank"
@@ -344,7 +346,7 @@ export default function Home() {
                     <Github size={16} />
                   </Link>
                 </Button>
-                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10">
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
                   <Link
                     href="https://ongmypet.netlify.app"
                     target="_blank"
@@ -353,6 +355,59 @@ export default function Home() {
                     <ExternalLink size={16} />
                   </Link>
                 </Button>
+              </div>
+              </div> 
+              <p className="text-slate-600 mb-4 text-sm">
+              Landing Page para uma ONG fictícia de adoção de cachorros. Dados consumidos da Dog API.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">JavaScript</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React Router</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Styled Components</span>
+              </div>
+             </div>
+            </div>
+
+            <div className="flex gap-4 bg-white gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <div className="flex-shrink-0 w-[200px] h-[150px]">
+                <img src="./movies-series.png" alt="Movies and Series" className="w-full h-full object-contain" />
+              </div>
+              <div className="flex flex-col">
+                <div className="flex justify-between">
+                  <h3 className="text-base sm:text-lg font-medium text-slate-800 mb-2">Popular Movies and Series</h3>
+                  <div className="flex">
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
+                  <Link
+                    href="https://github.com/gabrielajussana/MoviesAndSeriesAPI"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <Github size={16} />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
+                  <Link
+                    href="https://popularmoviesandseries.netlify.app/series"
+                    target="_blank"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <ExternalLink size={16} />
+                  </Link>
+                </Button>
+              </div>
+                </div>
+              
+              <p className="text-slate-600 mb-4 text-sm">
+              Aplicação frontend que exibe filmes e séries populares em tempo real, consumindo a API do The Movie Database (TMDb). 
+              O projeto apresenta detalhes como título, sinopse, e imagem de cada produção em uma interface responsiva e intuitiva.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">JavaScript</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React Router</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Styled Components</span>
+              </div>
               </div>
             </div>
           </div>

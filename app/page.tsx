@@ -388,7 +388,7 @@ export default function Home() {
                 </Button>
                 <Button variant="outline" className="text-slate-700 p-0 h-10 w-10 border-none">
                   <Link
-                    href="https://popularmoviesandseries.netlify.app/series"
+                    href="https://popularmoviesandseries.netlify.app/"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full"
                   >

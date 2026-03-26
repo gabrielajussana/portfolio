@@ -391,7 +391,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Contact</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Contato</h2>
           <p className="text-slate-600 mb-4 lg:mb-6">
               Estou sempre aberta a novas oportunidades e colaborações.
               Se você tem um projeto em mente ou apenas quer dizer um oi, fique à vontade para entrar em contato!

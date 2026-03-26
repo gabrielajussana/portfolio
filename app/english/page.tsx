@@ -9,20 +9,19 @@ import { usePathname, useRouter } from "next/navigation"
 
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("about")
-  const router = useRouter()
-  const pathname = usePathname()
-
-  const isEnglish = pathname.includes("/english")
-
-  const changeLang = (lang: "pt" | "en") => {
-    if (lang === "pt") {
-      router.push("/")
-    } else {
-      router.push("/english")
+   const [activeSection, setActiveSection] = useState("about")
+    const router = useRouter()
+    const pathname = usePathname()
+  
+    const isEnglish = pathname.includes("/english")
+  
+    const changeLang = (lang: "pt" | "en") => {
+      if (lang === "pt") {
+        router.push("/")
+      } else {
+        router.push("/english")
+      }
     }
-  }
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,7 +79,7 @@ export default function Home() {
 
             <div className="text-center lg:text-left space-y-1">
               <h1 className="text-2xl lg:text-3xl font-bold text-slate-800">Gabriela Jussana</h1>
-              <h2 className="text-lg text-slate-600">Engenheira de Testes</h2>
+              <h2 className="text-lg text-slate-600">QA Engineer</h2>
             </div>
           </div>
 
@@ -97,7 +96,7 @@ export default function Home() {
                     "lg:w-full",
                   )}
                 >
-                  Sobre
+                  About
                 </Link>
               </li>
               <li className="lg:w-full">
@@ -111,7 +110,7 @@ export default function Home() {
                     "lg:w-full",
                   )}
                 >
-                  Educação
+                  Education
                 </Link>
               </li>
               <li className="lg:w-full">
@@ -125,7 +124,7 @@ export default function Home() {
                     "lg:w-full",
                   )}
                 >
-                  Experiência
+                  Experience
                 </Link>
               </li>
               <li className="lg:w-full">
@@ -139,7 +138,7 @@ export default function Home() {
                     "lg:w-full",
                   )}
                 >
-                  Projetos
+                  Projects
                 </Link>
               </li>
               <li className="lg:w-full">
@@ -153,7 +152,7 @@ export default function Home() {
                     "lg:w-full",
                   )}
                 >
-                  Contato
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -176,65 +175,65 @@ export default function Home() {
               <Mail size={20} />
             </Link>
           </Button>
+           <div className="flex items-center bg-gray-200 rounded-full p-1 w-fit shadow-sm">
+            <button
+              onClick={() => changeLang("pt")}
+              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+                !isEnglish
+                  ? "bg-white text-blue-600 shadow"
+                  : "text-gray-600"
+              }`}
+            >
+              PT
+            </button>
 
-            <div className="flex items-center bg-gray-200 rounded-full p-1 w-fit shadow-sm">
-              <button
-                onClick={() => changeLang("pt")}
-                className={`px-4 py-1 rounded-full text-sm font-medium transition ${
-                  !isEnglish
-                    ? "bg-white text-blue-600 shadow"
-                    : "text-gray-600"
-                }`}
-              >
-                PT
-              </button>
-
-              <button
-                onClick={() => changeLang("en")}
-                className={`px-4 py-1 rounded-full text-sm font-medium transition ${
-                  isEnglish
-                    ? "bg-white text-blue-600 shadow"
-                    : "text-gray-600"
-                }`}
-              >
-                EN
-              </button>
-            </div>
+            <button
+              onClick={() => changeLang("en")}
+              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+                isEnglish
+                  ? "bg-white text-blue-600 shadow"
+                  : "text-gray-600"
+              }`}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </aside>
 
       <main className="w-full lg:ml-[400px] p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
         <section id="about" className="mb-12 lg:mb-20 pt-6 lg:pt-0">
-          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Sobre mim</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">About me</h2>
           <div className="space-y-4 text-slate-600">
             <p>
-              Sou uma engenheira de testes especializada em garantir a qualidade, desempenho e confiabilidade de aplicações web.
-               Com pós-graduação em Engenharia de Testes de Software, atuo no desenvolvimento de testes automatizados que validam desde a experiência do usuário até a lógica mais profunda da aplicação.
+              I am a test engineer specialized in ensuring quality, performance, and reliability in web applications.
+With a postgraduate degree in Software Test Engineering,
+I work on developing automated tests that validate everything from the user experience to the deepest logic of the application.
             </p>
           </div>
         </section>
 
         <section id="education" className="mb-12 lg:mb-20">
-          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Educação</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Education</h2>
           <div className="space-y-6 lg:space-y-8">
           <div className="border-l-2 border-blue-200 pl-4 sm:pl-6 relative">
             <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[7px] top-1"></div>
-            <h3 className="text-base sm:text-lg font-medium text-slate-800">Bacharelado em Ciência da Computação</h3>
+            <h3 className="text-base sm:text-lg font-medium text-slate-800">Bachelor's Degree in Computer Science</h3>
             <p className="text-slate-600">Centro Universitário dos Guararapes - UNIFG</p>
             <p className="text-slate-500 text-sm">2020 - 2023</p>
           </div>
 
           <div className="border-l-2 border-blue-200 pl-4 sm:pl-6 relative">
             <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[7px] top-1"></div>
-            <h3 className="text-base sm:text-lg font-medium text-slate-800">Pós-graduação em Engenharia de Software com foco em Análise de Testes</h3>
-            <p className="text-slate-600">Universidade Federal de Pernambuco- CIn UFPE</p>
+            <h3 className="text-base sm:text-lg font-medium text-slate-800">Postgraduate Degree in Software Testing</h3>
+            <p className="text-slate-600">Federal University of Pernambuco - CIn UFPE</p>
             <p className="text-slate-500 text-sm">2024 - 2025</p>
           </div>
           </div>
         </section>
 
         <section id="experience" className="mb-12 lg:mb-20">
-          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Experiência</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Experience</h2>
           <div className="space-y-8">
 
             <div className="border-l-2 border-blue-200 pl-4 sm:pl-6 relative">
@@ -244,18 +243,18 @@ export default function Home() {
                   <h3 className="text-base sm:text-lg font-medium text-slate-800">Test Automation Eng Analyst</h3>
                   <p className="text-blue-500 font-medium">Accenture</p>
                 </div>
-                <p className="text-slate-500 text-sm mt-1 sm:mt-0">Set 2025 - atualmente</p>
+                <p className="text-slate-500 text-sm mt-1 sm:mt-0">Sep 2025 - now</p>
               </div>
               <ul className="mt-4 space-y-2 text-slate-600 list-disc pl-5">
-                  <li>Executei de testes funcionais em portal web no contexto PTP, garantindo a qualidade dos fluxos de compras, pagamentos e integrações</li>
-                  <li>Utilizei Pipefy para gestão de demandas, registro de evidências e acompanhamento do ciclo de testes</li>
-                  <li>Criei cenários de teste utilizando BDD (Gherkin), com gestão e rastreabilidade por meio do Xray integrado ao Jira</li>
-                  <li>Executei de testes funcionais em ambiente Salesforce, incluindo validação de respostas de IA (Agentforce) por meio de testes baseados em prompts e análise de comportamento</li>
+                  <li>Execution of functional tests on a web portal within the PTP context, ensuring the quality of purchasing, payment, and integration workflows</li>
+                  <li>Use of Pipefy for demand management, evidence documentation, and test cycle tracking</li>
+                  <li>Creation of test scenarios using BDD (Gherkin), with management and traceability through Xray integrated with Jira</li>
+                  <li>Execution of functional tests in a Salesforce environment, including validation of AI responses (Agentforce) through prompt-based testing and behavior analysis</li>
               </ul>
 
               <div className="flex flex-wrap gap-2 mb-4 mt-4">
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Jira</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Testes de Software</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Software Testing</span>
                  <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Gherkin</span>
                 <span className="hidden sm:inline-block px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">
                   Salesforce
@@ -276,22 +275,22 @@ export default function Home() {
               <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[7px] top-1"></div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                 <div>
-                  <h3 className="text-base sm:text-lg font-medium text-slate-800">Residente em Teste de Software</h3>
+                  <h3 className="text-base sm:text-lg font-medium text-slate-800">Software Test Residence</h3>
                   <p className="text-blue-500 font-medium">Lenovo Company - Projeto CIn / Motorola</p>
                 </div>
-                <p className="text-slate-500 text-sm mt-1 sm:mt-0">Abr 2024 - Mar 2025</p>
+                <p className="text-slate-500 text-sm mt-1 sm:mt-0">Apr 2024 - Mar 2025</p>
               </div>
               <ul className="mt-4 space-y-2 text-slate-600 list-disc pl-5">
-                <li>Executei testes manuais e exploratórios para garantir a qualidade do software</li>
-                <li>Colaborei com equipes multidisciplinares para identificar e documentar defeitos</li>
-                <li>Habilidade de comunicação para reportar bugs e problemas identificados durante os testes</li>
-                <li>Participei em revisões de casos de teste e na melhoria contínua dos processos de testes</li>
+                  <li>Execution of manual and exploratory tests to ensure software quality</li>
+                  <li>Collaboration with cross-functional teams to identify and document defects</li>
+                  <li>Strong communication skills for reporting bugs and issues found during testing</li>
+                  <li>Participation in test case reviews and continuous improvement of test processes</li>
               </ul>
 
               <div className="flex flex-wrap gap-2 mb-4 mt-4">
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Jira</span>
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Selenium</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Testes de Software</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Software Testing</span>
                 <span className="hidden sm:inline-block px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">
                   PIT Mutantion Testing
                 </span>
@@ -311,19 +310,19 @@ export default function Home() {
               <div className="absolute w-3 h-3 bg-blue-400 rounded-full -left-[7px] top-1"></div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                 <div>
-                  <h3 className="text-base sm:text-lg font-medium text-slate-800">Desenvolvedora Front-end</h3>
+                  <h3 className="text-base sm:text-lg font-medium text-slate-800">Frontend Developer</h3>
                   <p className="text-blue-500 font-medium">VenturiX Solutions</p>
                 </div>
                 <p className="text-slate-500 text-sm mt-1 sm:mt-0">Aug 2022 - Mar 2024</p>
               </div>
              <ul className="mt-4 space-y-2 text-slate-600 list-disc pl-5">
-                <li>Desenvolvimento e manutenção de componentes de interface reutilizáveis</li>
-                <li>Desenvolvimento de sites responsivos para diversos clientes</li>
-                <li>Implementação de layouts utilizando React, Vue.js, Next.js, TypeScript e JavaScript</li>
-                <li className="hidden sm:block">Otimização de desempenho e tempo de carregamento</li>
-                <li className="hidden sm:block">Colaboração com designers e desenvolvedores back-end</li>
-                <li className="hidden sm:block">Integração com CMS e APIs de terceiros</li>
-                <li className="hidden sm:block">Participação em reuniões com clientes para entendimento de requisitos</li>
+              <li>Development and maintenance of reusable UI components</li>
+              <li>Development of responsive websites for various clients</li>
+              <li>Implementation of designs using React, Vue.js, Next.js, TypeScript, and JavaScript</li>
+              <li className="hidden sm:block">Performance and load time optimization</li>
+              <li className="hidden sm:block">Collaboration with designers and back-end developers</li>
+              <li className="hidden sm:block">Integration with CMS and third-party APIs</li>
+              <li className="hidden sm:block">Participation in client meetings to understand requirements</li>
             </ul>
               <div className="flex flex-wrap gap-2 mb-4 mt-4">
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
@@ -355,7 +354,7 @@ export default function Home() {
         </section>
 
         <section id="projects" className="mb-12 lg:mb-20">
-          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Projetos</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Projects</h2>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col sm:flex-row gap-4 bg-white items-center gap-4 p-2 sm:p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
              <div className="flex flex-col">
@@ -374,10 +373,10 @@ export default function Home() {
               </div>
               </div> 
               <p className="text-slate-600 mb-4 text-sm">
-                Execução de um projeto de automação de testes end-to-end utilizando Cypress para validar os principais fluxos do site automationexercise.com,
-                uma aplicação completa de e-commerce com funcionalidades como cadastro de usuário, login, carrinho, checkout e formulário de contato.
-                Foram implementados testes funcionais com foco na experiência do usuário, validação de dados e comportamento esperado da aplicação,
-                além da integração com CI para execução automatizada.
+                End-to-end test automation project using Cypress to validate the main flows of the website automationexercise.com,
+                a complete e-commerce application with features such as user registration, login, cart, checkout, and contact form.
+                Functional tests were implemented with a focus on user experience, data validation, and expected application behavior,
+                along with CI integration for automated execution.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">Cypress</span>
@@ -393,17 +392,17 @@ export default function Home() {
         <section id="contact" className="mb-10">
           <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4 lg:mb-6">Contact</h2>
           <p className="text-slate-600 mb-4 lg:mb-6">
-              Estou sempre aberta a novas oportunidades e colaborações.
-              Se você tem um projeto em mente ou apenas quer dizer um oi, fique à vontade para entrar em contato!
+           I'm always open to new opportunities and collaborations.
+          If you have a project in mind or just want to say hello, feel free to get in touch!
           </p>
           <Button className="bg-blue-500 hover:bg-blue-600 text-white" asChild>
-            <Link href="mailto:gabrielajussana@gmail.com">Enviar Email</Link>
+            <Link href="mailto:gabrielajussana@gmail.com">Send Email</Link>
           </Button>
         </section>
 
         <footer className="text-center text-slate-500 text-sm pt-8 lg:pt-10 pb-4 border-t border-slate-200">
-          <p>© {new Date().getFullYear()} Gabriela Jussana. Todos os direitos reservados.</p>
-          <p className="mt-1">Desenvolvido com Next.js e Tailwind CSS</p>
+          <p>© {new Date().getFullYear()} Gabriela Jussana. All rights reserved.</p>
+          <p className="mt-1">Developed with Next.js and Tailwind CSS</p>
         </footer>
       </main>
     </div>
